@@ -12,12 +12,15 @@ export class HttpServiceService {
 
   constructor(private http: HttpClient) { }
 
-  register(data: RegisterData): Observable<Observable<any>>{
-    return this.http.post<Observable<any>>(this.apiUrl + 'Account/register', data);
+  register(data: RegisterData): Observable<any>{
+    // return this.http.post<Observable<any>>(this.apiUrl + 'Account/register', data);
+    // @ts-ignore
+    return new Observable<any>;
   }
 
-  login(data: LoginForm): Observable<any> {
-    return this.http.post<Observable<any>>(this.apiUrl + 'Account/authenticate', data);
+  login(): Observable<any> {
+    // return this.http.post<Observable<any>>(this.apiUrl + 'Account/authenticate', data);
+    return this.http.get<Observable<any>>("assets/back.json");
   }
 
   getBanksOffers(): Observable<any>{
