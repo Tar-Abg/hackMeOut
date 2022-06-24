@@ -15,7 +15,7 @@ export default interface User {
 }
 
 export default interface LoginForm {
-  username: string,
+  email: string,
   password: string,
 }
 

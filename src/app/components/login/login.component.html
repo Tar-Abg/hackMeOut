@@ -20,7 +20,7 @@
         <div>
           <mat-form-field>
             <input
-              type="password"
+              type="text"
               matInput
               placeholder="Password"
               required
@@ -32,6 +32,7 @@
           </mat-form-field>
 
         </div>
+        <p *ngIf="isCorrectLogin" style="padding-left: 10px; color: red;">Email or Password is incorrect</p>
       </div>
 
       <button style="margin-top: 20px;" mat-raised-button routerLink="../register">Register</button>
