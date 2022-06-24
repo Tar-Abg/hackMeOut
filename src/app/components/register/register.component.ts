@@ -35,7 +35,6 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(): void {
     if(this.registerForm.valid){
-      console.log(this.registerForm.value);
       this.subscriptions.add(
         this.service.register(this.registerForm.value).subscribe(response => {
           console.log(response);

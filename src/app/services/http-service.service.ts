@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Observable} from "rxjs";
 import RegisterData from "../models/common-interfaces";
+import LoginForm from "../models/common-interfaces";
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +16,7 @@ export class HttpServiceService {
     return this.http.post<Observable<any>>(this.apiUrl, data);
   }
 
-  login(data: FormData): Observable<any> {
+  login(data: LoginForm): Observable<any> {
     return this.http.post<Observable<any>>(this.apiUrl, data);
   }
 
