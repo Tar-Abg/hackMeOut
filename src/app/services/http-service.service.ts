@@ -8,16 +8,16 @@ import LoginForm from "../models/common-interfaces";
   providedIn: 'root'
 })
 export class HttpServiceService {
-  apiUrl = "Url";
+  apiUrl = "localhost:8087/api/";
 
   constructor(private http: HttpClient) { }
 
   register(data: RegisterData): Observable<Observable<any>>{
-    return this.http.post<Observable<any>>(this.apiUrl, data);
+    return this.http.post<Observable<any>>(this.apiUrl + 'register', data);
   }
 
   login(data: LoginForm): Observable<any> {
-    return this.http.post<Observable<any>>(this.apiUrl, data);
+    return this.http.post<Observable<any>>(this.apiUrl + 'login', data);
   }
 
   getBanksOffers(): Observable<any>{
