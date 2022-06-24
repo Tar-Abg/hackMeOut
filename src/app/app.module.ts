@@ -18,6 +18,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
+import {MatSliderModule} from "@angular/material/slider";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import {MatButtonModule} from "@angular/material/button";
     MatCardModule,
     MatInputModule,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSliderModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,45 @@
-<p>card works!</p>
+<mat-card class="example-card">
+  <mat-card-title-group>
+  <div class="sections">
+    <div>
+      <mat-card-subtitle class="subtitle">Amount
+        <mat-slider aria-label="unit(s)" [(ngModel)]="amunt" [max]="50000" [value]="amunt" (change)="reCount($event)"></mat-slider>
+        <span class="amount">{{amunt | currency}}</span>
+      </mat-card-subtitle>
+      <mat-card-subtitle class="subtitle">Month
+        <mat-slider aria-label="unit(s)" [(ngModel)]="month" [max]="60" [value]="month" step="12"></mat-slider>
+        <span class="amount">{{month}}</span>
+      </mat-card-subtitle>
+
+      <mat-card-subtitle>Interest rate
+        <span class="amount">{{interstateRate + '%'}}</span>
+      </mat-card-subtitle>
+      <mat-card-subtitle>Commission
+        <span class="amount">{{commission + '%'}}</span>
+      </mat-card-subtitle>
+      <mat-card-subtitle>Actual interest rate
+        <span class="amount">{{interstateRate + commission + '%'}}</span>
+      </mat-card-subtitle>
+
+    </div>
+    <div class="rigth-section">
+      <mat-card-subtitle>First repayment amount
+        <span class="amount">{{firsRepaymentAmount | number : '1.0-2' | currency}}</span>
+      </mat-card-subtitle>
+
+      <mat-card-subtitle>First repayment date
+        <span class="amount">{{month | date}}</span>
+      </mat-card-subtitle>
+      <button mat-raised-button color="primary">Apply</button>
+    </div>
+  </div>
+    <div class="bank-name">
+      <h2>Acba</h2>
+      <img mat-card-sm-image src="assets/7971.jpeg" >
+
+    </div>
+  </mat-card-title-group>
+  <mat-card-content>
+<!--    {{'longText'}}-->
+  </mat-card-content>
+</mat-card>
