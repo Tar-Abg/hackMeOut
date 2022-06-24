@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import {subscribeOn, Subscription} from "rxjs";
+import {HttpServiceService} from "../../services/http-service.service";
 
 @Component({
   selector: 'app-register',
@@ -8,8 +10,12 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup = null as unknown as FormGroup;
+  subscriptions = new Subscription();
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private service: HttpServiceService
+    ) { }
 
   ngOnInit(): void {
     this.initializeForm();
@@ -27,7 +33,14 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-
+    if(this.registerForm.valid){
+      console.log(this.registerForm.value);
+      this.subscriptions.add(
+        this.service.register(this.registerForm.value).subscribe(response => {
+          console.log(response);
+        })
+      )
+    }
   }
 
 
