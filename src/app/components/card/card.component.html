@@ -30,7 +30,7 @@
       <mat-card-subtitle>First repayment date
         <span class="amount">{{month | date}}</span>
       </mat-card-subtitle>
-      <button mat-raised-button color="primary">Apply</button>
+      <button mat-raised-button color="primary" (click)="applyed.emit(3)">Apply</button>
     </div>
   </div>
     <div class="bank-name">

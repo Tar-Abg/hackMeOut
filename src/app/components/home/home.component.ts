@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
+import {SuccessComponent} from "../success/success.component";
+import {LoaddingComponent} from "../loadding/loadding.component";
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  isOpenSuccessModal = false;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) {}
 
-  ngOnInit(): void {
+  applay(): void {
+    this.dialog.open(LoaddingComponent, {
+      width: '250px'
+    });
+    setTimeout(() => {
+      this.dialog.closeAll();
+      this.dialog.open(SuccessComponent);
+    }, 3000)
+  }
+
+
+  ngOnInit() {
   }
 
 }
