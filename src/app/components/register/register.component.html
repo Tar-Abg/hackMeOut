@@ -1,1 +1,21 @@
-<p>register works!</p>
+<mat-card>
+  <mat-card-title>Register</mat-card-title>
+  <mat-card-content>
+    <form >
+      <p>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Username"
+            required
+          />
+          <mat-error>
+            Please provide a valid email address
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <a routerLink="../login" mat-raised-button href="https://www.google.com/">register</a>
+    </form>
+  </mat-card-content>
+</mat-card>
