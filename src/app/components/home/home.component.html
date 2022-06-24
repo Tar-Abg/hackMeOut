@@ -3,8 +3,7 @@
 </h1>
 
 <section>
-  <div class="card-item" *ngFor="let item of [1,2,3,4,5]">
-    <app-card (applyed)="applay()"></app-card>
+  <div class="card-item" *ngFor="let bank of banks">
+    <app-card (applyed)="applay()" [bank]="bank"></app-card>
   </div>
 </section>
-<!-- <app-success ></app-success>-->

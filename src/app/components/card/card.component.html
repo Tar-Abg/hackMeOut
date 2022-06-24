@@ -3,39 +3,39 @@
   <div class="sections">
     <div>
       <mat-card-subtitle class="subtitle">Amount
-        <mat-slider aria-label="unit(s)" [(ngModel)]="amunt" [max]="50000" [value]="amunt" (change)="reCount($event)"></mat-slider>
-        <span class="amount">{{amunt | currency}}</span>
+        <mat-slider aria-label="unit(s)" [(ngModel)]="bank.amunt" [max]="50000" [value]="bank.amunt" (change)="reCount($event)"></mat-slider>
+        <span class="amount">{{bank.amunt | currency}}</span>
       </mat-card-subtitle>
       <mat-card-subtitle class="subtitle">Month
-        <mat-slider aria-label="unit(s)" [(ngModel)]="month" [max]="60" [value]="month" step="12"></mat-slider>
-        <span class="amount">{{month}}</span>
+        <mat-slider aria-label="unit(s)" [(ngModel)]="bank.month" [max]="60" [value]="bank.month" step="12" (change)="reCountFee($event)"></mat-slider>
+        <span class="amount">{{bank.month}}</span>
       </mat-card-subtitle>
 
       <mat-card-subtitle>Interest rate
-        <span class="amount">{{interstateRate + '%'}}</span>
+        <span class="amount">{{bank.interstateRate + '%'}}</span>
       </mat-card-subtitle>
       <mat-card-subtitle>Commission
-        <span class="amount">{{commission + '%'}}</span>
+        <span class="amount">{{bank.commission + '%'}}</span>
       </mat-card-subtitle>
       <mat-card-subtitle>Actual interest rate
-        <span class="amount">{{interstateRate + commission + '%'}}</span>
+        <span class="amount">{{bank.interstateRate + bank.commission + '%'}}</span>
       </mat-card-subtitle>
 
     </div>
     <div class="rigth-section">
       <mat-card-subtitle>First repayment amount
-        <span class="amount">{{firsRepaymentAmount | number : '1.0-2' | currency}}</span>
+        <span class="amount">{{firsRepaymentAmount | number : '1.0-2' }} $</span>
       </mat-card-subtitle>
 
       <mat-card-subtitle>First repayment date
-        <span class="amount">{{month | date}}</span>
+        <span class="amount">{{bank.month | date}}</span>
       </mat-card-subtitle>
       <button mat-raised-button color="primary" (click)="applyed.emit(3)">Apply</button>
     </div>
   </div>
     <div class="bank-name">
-      <h2>Acba</h2>
-      <img mat-card-sm-image src="assets/7971.jpeg" >
+      <h2>{{bank.bankName}}</h2>
+      <img mat-card-sm-image [src]="'assets/'+bank.img" >
 
     </div>
   </mat-card-title-group>

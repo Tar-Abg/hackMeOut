@@ -20,14 +20,13 @@
     margin-top: 20px;
   }
   .bank-name {
-    width: 300px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
     img {
-      width: 150px;
+      width: 100%;
       height: 150px;
-      border-radius: 50%;
     }
     h2 {
       text-align: center;
