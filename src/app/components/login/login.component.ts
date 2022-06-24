@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup = null as unknown as FormGroup;
   subscriptions = new Subscription();
   loginData: LoginForm = null as unknown as LoginForm;
+  isCorrectLogin = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -38,7 +39,10 @@ export class LoginComponent implements OnInit {
       this.subscriptions.add(
         this.service.login().subscribe(response => {
           if(this.loginData.email === response.email && this.loginData.password === response.password){
+            this.isCorrectLogin = false;
             this.router.navigate(['home']).then(r => r);
+          }else{
+            this.isCorrectLogin = true;
           }
         })
       )
