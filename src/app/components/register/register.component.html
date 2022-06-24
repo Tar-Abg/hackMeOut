@@ -1,21 +1,123 @@
 <mat-card>
   <mat-card-title>Register</mat-card-title>
   <mat-card-content>
-    <form >
-      <p>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="First Name"
+            required
+            formControlName="firstName"
+          />
+          <mat-error>
+            Please provide a valid First Name
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Last Name"
+            required
+            formControlName="lastName"
+          />
+          <mat-error>
+            Please provide a valid Last Name
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input
+            type="email"
+            matInput
+            placeholder="Email"
+            required
+            formControlName="email"
+            email
+          />
+          <mat-error>
+            Please provide a valid Email address
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input
+            type="email"
+            matInput
+            placeholder="Phone"
+            required
+            formControlName="phone"
+            email
+          />
+          <mat-error>
+            Please provide a valid Phone number
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
         <mat-form-field>
           <input
             type="text"
             matInput
             placeholder="Username"
             required
+            formControlName="userName"
           />
           <mat-error>
-            Please provide a valid email address
+            Please provide a valid Username
           </mat-error>
         </mat-form-field>
-      </p>
-      <a routerLink="../login" mat-raised-button href="https://www.google.com/">register</a>
+      </div>
+      <div>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Country"
+            required
+            formControlName="country"
+          />
+          <mat-error>
+            Please provide a valid Country
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input
+            type="password"
+            matInput
+            placeholder="Password"
+            required
+            formControlName="password"
+          />
+          <mat-error>
+            Please provide a valid Password
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input
+            type="password"
+            matInput
+            placeholder="Confirm password"
+            required
+            formControlName="confirmPassword"
+          />
+          <mat-error>
+            Please provide a valid Confirm password
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <button style="margin-top: 20px;" mat-raised-button>Register</button>
+      <button style="margin-top: 20px; margin-left: 20px" mat-raised-button routerLink="../login">Login</button>
     </form>
   </mat-card-content>
 </mat-card>
