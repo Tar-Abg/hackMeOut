@@ -18,8 +18,12 @@ import {MatCardModule} from "@angular/material/card";
 import {MatInputModule} from "@angular/material/input";
 import {MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
+import {MatSliderModule} from "@angular/material/slider";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SuccessComponent } from './components/success/success.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import { LoaddingComponent } from './components/loadding/loadding.component';
 
 @NgModule({
   declarations: [
@@ -30,23 +34,27 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     HeaderComponent,
     NotFoundComponent,
-    CardComponent
+    CardComponent,
+    SuccessComponent,
+    LoaddingComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatCardModule,
-    MatInputModule,
-    MatListModule,
-    MatButtonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatCardModule,
+        MatInputModule,
+        MatListModule,
+        MatButtonModule,
+        MatSliderModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        MatDialogModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

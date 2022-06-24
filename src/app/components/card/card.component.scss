@@ -1,0 +1,36 @@
+.example-card {
+  margin-bottom: 8px;
+  .sections {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .amount {
+    font-weight: 700;
+    color: black;
+  }
+  .blocks {
+    display: flex;
+  };
+  .subtitle {
+    margin-bottom: 0;
+  }
+  .rigth-section {
+    margin-right: 100px;
+    margin-top: 20px;
+  }
+  .bank-name {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+}
