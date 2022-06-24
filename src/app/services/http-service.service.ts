@@ -13,11 +13,11 @@ export class HttpServiceService {
   constructor(private http: HttpClient) { }
 
   register(data: RegisterData): Observable<Observable<any>>{
-    return this.http.post<Observable<any>>(this.apiUrl + 'register', data);
+    return this.http.post<Observable<any>>(this.apiUrl + 'Account/register', data);
   }
 
   login(data: LoginForm): Observable<any> {
-    return this.http.post<Observable<any>>(this.apiUrl + 'login', data);
+    return this.http.post<Observable<any>>(this.apiUrl + 'Account/authenticate', data);
   }
 
   getBanksOffers(): Observable<any>{

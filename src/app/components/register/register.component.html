@@ -9,7 +9,7 @@
             matInput
             placeholder="First Name"
             required
-            formControlName="firstname"
+            formControlName="firstName"
           />
           <mat-error>
             Please provide a valid First Name
@@ -23,7 +23,7 @@
             matInput
             placeholder="Last Name"
             required
-            formControlName="lastname"
+            formControlName="lastName"
           />
           <mat-error>
             Please provide a valid Last Name
@@ -48,11 +48,26 @@
       <div>
         <mat-form-field>
           <input
+            type="email"
+            matInput
+            placeholder="Phone"
+            required
+            formControlName="phone"
+            email
+          />
+          <mat-error>
+            Please provide a valid Phone number
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input
             type="text"
             matInput
             placeholder="Username"
             required
-            formControlName="username"
+            formControlName="userName"
           />
           <mat-error>
             Please provide a valid Username
@@ -76,7 +91,7 @@
       <div>
         <mat-form-field>
           <input
-            type="text"
+            type="password"
             matInput
             placeholder="Password"
             required
@@ -90,11 +105,11 @@
       <div>
         <mat-form-field>
           <input
-            type="text"
+            type="password"
             matInput
             placeholder="Confirm password"
             required
-            formControlName="confirmpassword"
+            formControlName="confirmPassword"
           />
           <mat-error>
             Please provide a valid Confirm password
