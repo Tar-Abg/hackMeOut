@@ -4,7 +4,8 @@ export default interface RegisterData {
   email: string,
   username: string,
   password: string,
-  confirmpassword: string
+  confirmpassword: string,
+  country: string
 }
 
 export default interface User {

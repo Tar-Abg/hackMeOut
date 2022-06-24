@@ -12,7 +12,7 @@
             formControlName="firstname"
           />
           <mat-error>
-            Please provide a valid email address
+            Please provide a valid First Name
           </mat-error>
         </mat-form-field>
       </div>
@@ -26,7 +26,7 @@
             formControlName="lastname"
           />
           <mat-error>
-            Please provide a valid email address
+            Please provide a valid Last Name
           </mat-error>
         </mat-form-field>
       </div>
@@ -41,7 +41,7 @@
             email
           />
           <mat-error>
-            Please provide a valid email address
+            Please provide a valid Email address
           </mat-error>
         </mat-form-field>
       </div>
@@ -55,7 +55,21 @@
             formControlName="username"
           />
           <mat-error>
-            Please provide a valid email address
+            Please provide a valid Username
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            placeholder="Country"
+            required
+            formControlName="country"
+          />
+          <mat-error>
+            Please provide a valid Country
           </mat-error>
         </mat-form-field>
       </div>
@@ -69,7 +83,7 @@
             formControlName="password"
           />
           <mat-error>
-            Please provide a valid email address
+            Please provide a valid Password
           </mat-error>
         </mat-form-field>
       </div>
@@ -83,11 +97,11 @@
             formControlName="confirmpassword"
           />
           <mat-error>
-            Please provide a valid email address
+            Please provide a valid Confirm password
           </mat-error>
         </mat-form-field>
       </div>
-      <button  mat-raised-button>Register</button>
+      <button style="margin-top: 20px;" mat-raised-button>Register</button>
     </form>
   </mat-card-content>
 </mat-card>
