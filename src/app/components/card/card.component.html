@@ -3,7 +3,7 @@
   <div class="sections">
     <div>
       <mat-card-subtitle class="subtitle">Amount
-        <mat-slider aria-label="unit(s)" [(ngModel)]="bank.amunt" [max]="50000" [value]="bank.amunt" (change)="reCount($event)"></mat-slider>
+        <mat-slider aria-label="unit(s)" [(ngModel)]="bank.amunt" [max]="amunt" [value]="amunt" (change)="reCount($event)"></mat-slider>
         <span class="amount">{{bank.amunt | currency}}</span>
       </mat-card-subtitle>
       <mat-card-subtitle class="subtitle">Month

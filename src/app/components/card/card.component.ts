@@ -8,7 +8,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 export class CardComponent implements OnInit {
   @Output() applyed: EventEmitter<number> = new EventEmitter<number>();
   @Input() bank: any;
-  // amunt: number = 50000;
+  amunt: number = 0;
   // month: number = 60;
   // interstateRate: number = 12;
   // commission: number = 3;
@@ -19,6 +19,7 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.firsRepaymentAmount = (this.bank.amunt + this.bank.amunt * 15 / 100) / 60;
+    this.amunt = this.bank.amunt
   }
 
   reCount(event: any): void {
